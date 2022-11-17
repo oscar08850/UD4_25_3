@@ -15,7 +15,7 @@ public class Caja {
 
 	// Atributos de la entidad Fabricante
 	@Id
-	private String numReferencia;
+	private String numReferencia; // -> num_referencia
 	private String contenido;
 	private int valor;
 	
@@ -31,7 +31,7 @@ public class Caja {
 	}
 
 	public Caja(String numReferencia, String contenido, int valor, Almacenes almacen_id) {
-		super();
+		//super();
 		this.numReferencia = numReferencia;
 		this.contenido = contenido;
 		this.valor = valor;
