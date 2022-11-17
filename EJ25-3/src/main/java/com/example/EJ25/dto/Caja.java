@@ -19,7 +19,6 @@ public class Caja {
 	private String contenido;
 	private int valor;
 	
-	private int almacen;
 
 	@ManyToOne
 	@JoinColumn(name = "almacen_id")
@@ -31,12 +30,11 @@ public class Caja {
 
 	}
 
-	public Caja(String numReferencia, String contenido, int valor, int almacen, Almacenes almacen_id) {
+	public Caja(String numReferencia, String contenido, int valor, Almacenes almacen_id) {
 		super();
 		this.numReferencia = numReferencia;
 		this.contenido = contenido;
 		this.valor = valor;
-		this.almacen = almacen;
 		this.almacen_id = almacen_id;
 	}
 
@@ -64,13 +62,7 @@ public class Caja {
 		this.valor = valor;
 	}
 
-	public int getAlmacen() {
-		return almacen;
-	}
 
-	public void setAlmacen(int almacen) {
-		this.almacen = almacen;
-	}
 
 	public Almacenes getAlmacen_id() {
 		return almacen_id;
@@ -82,8 +74,7 @@ public class Caja {
 
 	@Override
 	public String toString() {
-		return "Caja [numReferencia=" + numReferencia + ", contenido=" + contenido + ", valor=" + valor + ", almacen="
-				+ almacen + ", almacen_id=" + almacen_id + "]";
+		return "Caja [numReferencia=" + numReferencia + ", contenido=" + contenido + ", valor=" + valor + ", almacen_id=" + almacen_id + "]";
 	}
 	
 	
